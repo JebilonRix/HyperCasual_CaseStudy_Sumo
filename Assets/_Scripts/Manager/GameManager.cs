@@ -11,6 +11,7 @@ namespace SumoDemo
         [SerializeField] uint _remainEnemy = 7;
 
         private GameState _gameState;
+        private bool _isGameOver;
 
         public static GameManager Instance { get => _instance; set => _instance = value; }
         public uint RemainEnemy { get => _remainEnemy; set => _remainEnemy = value; }
@@ -32,7 +33,10 @@ namespace SumoDemo
         {
             if (RemainPlayer <= 0 || RemainEnemy <= 0)
             {
-                StateMachine(GameState.GameOver);
+                if (!_isGameOver)
+                {
+                    StateMachine(GameState.GameOver);
+                }
             }
         }
         private void StateMachine(GameState gameState)
@@ -44,12 +48,13 @@ namespace SumoDemo
                 case GameState.GamePlay:
                     Time.timeScale = 1;
                     break;
+
                 case GameState.GameOver:
 
+                    ScoreBoard();
+                    _isGameOver = true;
                     Time.timeScale = 0;
                     Debug.Log("Game over");
-                    ScoreBoard();
-
                     break;
             }
         }

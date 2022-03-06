@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
       value: 4
@@ -319,6 +323,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
       value: 4
@@ -399,6 +407,10 @@ PrefabInstance:
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
@@ -767,6 +779,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
       value: 4
@@ -899,7 +915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _remainPlayer: 1
-  _remainEnemy: 7
+  _remainEnemy: 8
 --- !u!1 &1324425505
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +968,10 @@ PrefabInstance:
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
@@ -1148,6 +1168,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
       value: 4
@@ -1286,6 +1310,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x
       value: 4
@@ -1362,6 +1390,10 @@ PrefabInstance:
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_Name
       value: Sumo1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: _checkRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862075, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _pushForce.x

@@ -8,13 +8,13 @@ namespace SumoDemo
     {
         [SerializeField] LayerMask _chacterLayer, _boostLayer;
         [SerializeField] float _checkRadius;
+        [SerializeField] float _checkRate = 0.5f;
 
         private CharacterMovement _sumoMovement;
         private CharacterAttack _attack;
-        private Rigidbody targetBody;
-        private bool canAttack;
-
-        private float counter = 2f, checkRate = 2f;
+        private Rigidbody _targetBody;
+        private float _counter = 2f;
+        private bool _canAttack;
 
         #region Unity Func.
         private void Start()
@@ -24,19 +24,19 @@ namespace SumoDemo
         }
         private void FixedUpdate()
         {
-            if (checkRate <= counter)
+            if (_checkRate <= _counter)
             {
                 Detection();
-                counter = 0;
+                _counter = 0;
             }
             else
             {
-                counter += Time.fixedDeltaTime;
+                _counter += Time.fixedDeltaTime;
             }
 
-            if (canAttack)
+            if (_canAttack)
             {
-                _attack.Attack(targetBody);
+                _attack.Attack(_targetBody);
             }
         }
         #endregion
@@ -56,7 +56,7 @@ namespace SumoDemo
                 }
                 else
                 {
-                    if (x.objectType==IInteractable.ObjectType.Boost)
+                    if (x.objectType == IInteractable.ObjectType.Boost)
                     {
                         Decision(x.GetRigidbody(), x.GetPosition(), x.objectType);
                         break;
@@ -64,7 +64,7 @@ namespace SumoDemo
                     else
                     {
                         Decision(x.GetRigidbody(), x.GetPosition(), x.objectType);
-                    }            
+                    }
                 }
             }
         }
@@ -76,13 +76,13 @@ namespace SumoDemo
 
                     if (Vector3.Distance(transform.position, targetTransform.position) <= _attack.AttackRange)
                     {
-                        canAttack = true;
-                        targetBody = rigidbody;
+                        _canAttack = true;
+                        _targetBody = rigidbody;
                         _sumoMovement.CanMove = false;
                     }
                     else
                     {
-                        canAttack = false;
+                        _canAttack = false;
                         MoveTo(targetTransform);
                     }
                     break;
