@@ -1,14 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SumoDemo
 {
     public class GameManager : MonoBehaviour
     {
-        static GameManager _instance;
+        private static GameManager _instance;
 
         [SerializeField] uint _remainPlayer = 1;
         [SerializeField] uint _remainEnemy = 7;
+
+        [SerializeField] GameObject canvas;
+        [SerializeField] Text _text;
+        [SerializeField] Text _textPoint;
 
         private GameState _gameState;
         private bool _isGameOver;
@@ -29,6 +34,10 @@ namespace SumoDemo
             }
         }
 
+        private void Start()
+        {
+            StateMachine(GameState.GamePlay);
+        }
         private void Update()
         {
             if (RemainPlayer <= 0 || RemainEnemy <= 0)
@@ -39,6 +48,10 @@ namespace SumoDemo
                 }
             }
         }
+        public void TextUpdate(string massage)
+        {
+            _text.text = massage;
+        }
         private void StateMachine(GameState gameState)
         {
             _gameState = gameState;
@@ -46,20 +59,21 @@ namespace SumoDemo
             switch (_gameState)
             {
                 case GameState.GamePlay:
+                    canvas.SetActive(false);
                     Time.timeScale = 1;
                     break;
 
                 case GameState.GameOver:
 
+                    canvas.SetActive(true);
                     ScoreBoard();
                     _isGameOver = true;
                     Time.timeScale = 0;
-                    Debug.Log("Game over");
                     break;
             }
         }
 
-        private static void ScoreBoard()
+        private void ScoreBoard()
         {
             List<uint> scoreBoard = new List<uint>();
 
@@ -72,7 +86,7 @@ namespace SumoDemo
 
             scoreBoard.Sort();
 
-            Debug.Log(scoreBoard[scores.Length - 1]);
+            _textPoint.text = scoreBoard[scores.Length - 1].ToString();
         }
     }
     public enum GameState

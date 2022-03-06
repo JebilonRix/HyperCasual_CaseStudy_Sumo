@@ -48,22 +48,22 @@ namespace SumoDemo
 
             foreach (Collider item in colliders)
             {
-                IInteractable x = item.GetComponent<IInteractable>();
+                IInteractable interactable = item.GetComponent<IInteractable>();
 
-                if (x.GetCollider() == _sumoMovement.GetCollider())
+                if (interactable.GetCollider() == _sumoMovement.GetCollider())
                 {
                     continue;
                 }
                 else
                 {
-                    if (x.objectType == IInteractable.ObjectType.Boost)
+                    if (interactable.objectType == IInteractable.ObjectType.Boost)
                     {
-                        Decision(x.GetRigidbody(), x.GetPosition(), x.objectType);
+                        Decision(interactable.GetRigidbody(), interactable.GetPosition(), interactable.objectType);
                         break;
                     }
                     else
                     {
-                        Decision(x.GetRigidbody(), x.GetPosition(), x.objectType);
+                        Decision(interactable.GetRigidbody(), interactable.GetPosition(), interactable.objectType);
                     }
                 }
             }
@@ -78,7 +78,6 @@ namespace SumoDemo
                     {
                         _canAttack = true;
                         _targetBody = rigidbody;
-                        _sumoMovement.CanMove = false;
                     }
                     else
                     {
@@ -89,7 +88,6 @@ namespace SumoDemo
 
                 case IInteractable.ObjectType.Boost:
 
-                    //Debug.Log("boost");
                     MoveTo(targetTransform);
                     break;
             }

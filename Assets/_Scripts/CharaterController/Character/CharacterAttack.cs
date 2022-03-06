@@ -12,23 +12,12 @@ namespace SumoDemo
         public float AttackRange { get => _attackRange; set => _attackRange = value; }
         public Vector3 Power { get => _power; set => _power = value; }
 
-        Vector3 gizmo;
-
         public void Attack(Rigidbody rigidbody)
         {
-            // Debug.Log("Attack");
-            rigidbody.velocity = new Vector3(0, rigidbody.velocity.y, 0);
-
             Vector3 force = _pushForce + Power;
-            Vector3 resist = rigidbody.transform.localScale / 3;
+            Vector3 resist = rigidbody.transform.localScale / 2;
 
-            rigidbody.AddForce(force - resist, ForceMode.Impulse);
-            gizmo = force;
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.DrawRay(this.transform.position, gizmo);
+            rigidbody.AddForce(force - resist, ForceMode.Force);
         }
     }
 }

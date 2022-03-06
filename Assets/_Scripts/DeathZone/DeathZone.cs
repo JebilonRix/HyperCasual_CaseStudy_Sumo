@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SumoDemo
@@ -11,12 +9,18 @@ namespace SumoDemo
             if (other.tag == "Player")
             {
                 GameManager.Instance.RemainPlayer--;
+                GameManager.Instance.TextUpdate("You Lose");
                 other.gameObject.SetActive(false);
             }
             if (other.tag == "Sumo")
             {
                 other.gameObject.SetActive(false);
                 GameManager.Instance.RemainEnemy--;
+
+                if (GameManager.Instance.RemainEnemy <= 0)
+                {
+                    GameManager.Instance.TextUpdate("You Win");
+                }
             }
         }
     }
