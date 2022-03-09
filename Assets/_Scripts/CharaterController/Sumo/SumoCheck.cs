@@ -92,7 +92,6 @@ namespace SumoDemo
                     break;
             }
         }
-
         private void MoveTo(Transform targetTransform)
         {
             _sumoMovement.CanMove = true;

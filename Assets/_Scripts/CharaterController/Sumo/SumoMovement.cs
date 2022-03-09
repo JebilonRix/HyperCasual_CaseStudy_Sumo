@@ -21,7 +21,7 @@ namespace SumoDemo
             {
                 transform.position = Vector3.Lerp(transform.position, _destination.position, Time.fixedDeltaTime);
             }
-        }
+        }     
         #endregion
 
         #region Public Func.

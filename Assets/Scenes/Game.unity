@@ -206,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
@@ -467,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
@@ -987,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
@@ -1438,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
@@ -1637,7 +1637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
@@ -1861,6 +1861,10 @@ PrefabInstance:
     - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: m_Name
       value: Sumo1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536620246353862067, guid: 7480443a7f41525419e872036b478e85, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6536620246353862074, guid: 7480443a7f41525419e872036b478e85, type: 3}
       propertyPath: _checkRate
